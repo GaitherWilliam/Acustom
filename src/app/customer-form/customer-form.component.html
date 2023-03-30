@@ -1,28 +1,39 @@
 <div>
-    <form #someForm="ngForm" class="example-form">
+    <h2>Order Form</h2>
+    <form [formGroup]="customerOrderForm" (ngSubmit)="submitOrderData()" novalidate class="example-form">
         <mat-form-field class="example-full-width">
-            <input matInput placeholder="Name" value="Sushi" ngModel name="name">
+            <input class="form-control" matInput placeholder="Name" type="text" formControlName="name" name="name"
+                ngModel required>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
-            <input type="number" matInput placeholder="Quantity" value="0" ngModel name="quantity">
+            <input class="form-control" type="number" matInput placeholder="Quantity" formControlName="quantity"
+                value="0" ngModel name="quantity">
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
             <mat-label>Product</mat-label>
-            <mat-select>
-                <mat-option *ngFor="let product of products" [value]="product.value">
-                    {{product.viewValue}}
-                </mat-option>
+            <mat-select formControlName="product">
+                <mat-option>None</mat-option>
+                <mat-option value="Blue and Orange">Blue and Orange</mat-option>
+                <mat-option value="Black and Gold">Black And Gold</mat-option>
+                <mat-option value="Yellow and Pink">Yellow and Pink</mat-option>
             </mat-select>
+            <!-- <mat-option *ngFor="let product of products" formControlName="product" [value]="product.viewValue">
+                    {{product.viewValue}}
+                </mat-option> -->
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
-            <textarea matInput placeholder="Leave a comment" value="some comments about the food" ngModel
+            <textarea matInput placeholder="Leave a comment" formControlName="comment" value="some comments" ngModel
                 name="comments"></textarea>
         </mat-form-field>
 
-        <button (click)="someForm.reset()" mat-raised-button color="primary">Reset Form</button>
+        <button type="button" class="btn btn-secondary gap-right" (click)="ResetForm()">
+            Reset
+        </button>
+        <button type="submit" class="btn btn-success" [disabled]="!customerOrderForm.valid">
+            Add Order
+        </button>
     </form>
-
 </div>

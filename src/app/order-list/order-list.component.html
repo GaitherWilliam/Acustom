@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h2 class="h2">Orders List</h2>
+    <a routerLink="/customer-form" class="btn btn-success" *ngIf="hideWhenNoOrder">
+        Add Order
+    </a>
+</div>
+<div class="pricing-header mx-auto">
+    <div class="no-data text-center" *ngIf="preLoader">
+        <img src="assets/preloader.gif" class="preloader-icon" alt="No order" />
+    </div>
+    <div class="no-data text-center" *ngIf="noData">
+        <img src="assets/no-order.svg" class="nodata-msg" alt="No order" />
+        <p class="nodata-msg">No order added yet!</p>
+        <a routerLink="/customer-form" class="btn btn-success"> Add order </a>
+    </div>
+    <div class="table-responsive" *ngIf="hideWhenNoOrder">
+        <table class="table table-bordered table-responsive-sm table-responsive-md table-responsive-lg">
+            <thead>
+                <tr>
+                    <th scope="col">Order ID</th>
+                    <th scope="col">Order Name</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Product</th>
+                    <th class="text-center" scope="col">Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="
+            let order of Order
+              | paginate: { itemsPerPage: 8, currentPage: p };
+            let i = index
+          ">
+                    <th scope="row">{{ order.$key }}</th>
+                    <td>{{ order.name }} </td>
+                    <td>{{ order.quantity }}</td>
+                    <td>{{ order.product }}</td>
+                    <td>{{ order.comment }}</td>
+                    <td class="text-center action-block">
+                        <span class="mr-2 btn btn-outline-primary btn-sm"
+                            routerLink="/edit-order/{{ order.$key }}">Edit</span>
+                        <span class="btn btn-outline-danger btn-sm" (click)="deleteOrder(order)">Delete</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
