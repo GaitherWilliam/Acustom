@@ -37,6 +37,9 @@ import { BusinessLoginFormComponent } from './business-login-form/business-login
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { UploadFormComponent } from './upload-form/upload-form.component';
+import { UploadListComponent } from './upload-list/upload-list.component';
+import { UploadDetailsComponent } from './upload-details/upload-details.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +58,10 @@ import { NavigationComponent } from './navigation/navigation.component';
     RegistrationFormComponent,
     DashboardComponent,
     CalendarComponent,
-    NavigationComponent
+    NavigationComponent,
+    UploadFormComponent,
+    UploadListComponent,
+    UploadDetailsComponent
   ],
   imports: [
     BrowserModule,
