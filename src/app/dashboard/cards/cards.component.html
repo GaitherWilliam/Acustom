@@ -4,8 +4,20 @@
          Tasks:
         </mat-card-title>
         <mat-card-title-group>
-            <ul></ul>
+            <ul> 
+                <li routerLinkActive="active" *ngFor="let taskListTab of taskListTabs" class="">
+                        <a class="" [routerLink]="[taskListTab.path]">
+                            <i class="material-icons">{{ taskListTab.icon }}</i>
+                            <p>{{ taskListTab.title }}</p>
+                        </a>    
+                </li>
+            </ul>
         </mat-card-title-group>
     </mat-card-header>
     <mat-card-content>This is the inside of the card.</mat-card-content>
 </mat-card>
+<style>
+    mat-card-title-group ul li a .material-icons{
+       list-style: none; 
+    }
+</style>

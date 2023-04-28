@@ -42,8 +42,8 @@ import { UploadFormComponent } from './upload-form/upload-form.component';
 import { UploadListComponent } from './upload-list/upload-list.component';
 import { UploadDetailsComponent } from './upload-details/upload-details.component';
 import { CardsComponent } from './dashboard/cards/cards.component';
-import { CustomerDashComponent } from './dashboard/customer-dash/customer-dash.component';
 import { PreProductionComponent } from './dashboard/cards/pre-production/pre-production.component';
+import { CustomerDashComponent } from './dashboard/customer-dash/customer-dash.component';
 
 @NgModule({
   declarations: [
@@ -67,8 +67,8 @@ import { PreProductionComponent } from './dashboard/cards/pre-production/pre-pro
     UploadListComponent,
     UploadDetailsComponent,
     CardsComponent,
-    CustomerDashComponent,
-    PreProductionComponent
+    PreProductionComponent,
+    CustomerDashComponent
   ],
   imports: [
     BrowserModule,
@@ -100,7 +100,6 @@ import { PreProductionComponent } from './dashboard/cards/pre-production/pre-pro
   providers: [
     ScreenTrackingService, UserTrackingService
   ],
-  bootstrap: [AppComponent,CalendarComponent
-  ]
+  bootstrap: [ AppComponent, CalendarComponent ]
 })
 export class AppModule { }
