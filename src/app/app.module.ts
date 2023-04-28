@@ -27,6 +27,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
+import { MatCardModule } from '@angular/material/card';
 import { EditOrderComponent } from './edit-order/edit-order.component';
 import { OrderListComponent } from './order-list/order-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -40,6 +41,9 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { UploadFormComponent } from './upload-form/upload-form.component';
 import { UploadListComponent } from './upload-list/upload-list.component';
 import { UploadDetailsComponent } from './upload-details/upload-details.component';
+import { CardsComponent } from './dashboard/cards/cards.component';
+import { CustomerDashComponent } from './dashboard/customer-dash/customer-dash.component';
+import { PreProductionComponent } from './dashboard/cards/pre-production/pre-production.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +65,10 @@ import { UploadDetailsComponent } from './upload-details/upload-details.componen
     NavigationComponent,
     UploadFormComponent,
     UploadListComponent,
-    UploadDetailsComponent
+    UploadDetailsComponent,
+    CardsComponent,
+    CustomerDashComponent,
+    PreProductionComponent
   ],
   imports: [
     BrowserModule,
@@ -74,6 +81,7 @@ import { UploadDetailsComponent } from './upload-details/upload-details.componen
     MatInputModule,
     MatSelectModule,
     MatOptionModule,
+    MatCardModule,
     NgxPaginationModule,
     ToastrModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
@@ -92,6 +100,7 @@ import { UploadDetailsComponent } from './upload-details/upload-details.componen
   providers: [
     ScreenTrackingService, UserTrackingService
   ],
-  bootstrap: [AppComponent,CalendarComponent]
+  bootstrap: [AppComponent,CalendarComponent
+  ]
 })
 export class AppModule { }
