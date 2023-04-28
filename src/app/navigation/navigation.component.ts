@@ -22,7 +22,7 @@ export const ROUTES: RouteInfo[] = [
 export class NavigationComponent implements OnInit {
   dashTabs: any[];
 
-  constructor() { }
+  constructor() {}
   
   ngOnInit() {
     this.dashTabs = ROUTES.filter(dashTab => dashTab);
