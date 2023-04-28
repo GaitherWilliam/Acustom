@@ -1,13 +1,13 @@
 <!--Dashboard left side navigation-->
 <div class="nav_wrapper">
         <ul class="nav">
-                <li routerLinkActive="active" *ngFor="let dashTab of dashTabs" class="{{dashTab.class}} nav-item">
-                    <a class="nav-link" [routerLink]="[dashTab.path]">
-                        <i class="material-icons">{{dashTab.icon}}</i>
-                        <p>{{dashTab.title}}</p>
-                    </a>
-                </li>
-            </ul>
+            <li routerLinkActive="active" *ngFor="let dashTab of dashTabs" class="{{dashTab.class}} nav-item">
+                <a class="nav-link" [routerLink]="[dashTab.path]">
+                    <i class="material-icons">{{dashTab.icon}}</i>
+                    <p>{{dashTab.title}}</p>
+                </a>
+            </li>
+        </ul>
 </div>
 <style>
     :root {
@@ -20,13 +20,18 @@
 }
     .nav_wrapper {
         background-color: var(--dark-blue);
-        color: var(--light-blue);
         width: 120px;
+        height: 100%;
         float: left;
+        position: relative 100% 100% 100% 100%;
+
 }
     .nav {
         display: block;
         margin-left: auto;
         margin-right:auto;
+}
+.nav u li p {
+
 }
 </style>
