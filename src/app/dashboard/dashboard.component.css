@@ -8,29 +8,59 @@
 }
 body {
     background-color: #769FB6;
+    background-image: url("assets\resources\img\geometric_background.jpg");
+    background-size: cover;
     height: 100%;
+    padding: 25px;
+    padding-left: 150px;
 }
 
 mat-card {
     height: 100%;
+    background-color: var(--light-blue);
 }
 
 mat-card-header {
+    background-color: var(--dark-blue);
+    color: var(--light-blue);;
+}
+
+mat-card-content {
     background-color: var(--light-blue);
-    color: white;
+    color: var(--dark-blue);
 }
 
 .container-left {
-    width: 500px;
+    width: 800px;
     height: 100%; 
+
 } 
 
 mat-card mat-card.task-list {
-    height: 100px;
+    height: 100%;
+
 }
 
-container-right-top {
-    position: relative;
-    left: 700px;
-    top: -280px;
+.container-right-top {
+    width: 500px;
+    height: 200px;
+    position:relative;
+    left: 900px;
+    bottom: 1240px;
+}
+
+mat-card mat-card.order-count {
+    height:100%;
+}
+
+.container-right-bttm {
+    width: 500px;
+    height: 400px;
+    position:relative;
+    left: 900px;
+    bottom: 1150px;
+}
+
+mat-card mat-card.client-order-list {
+    height:100%;
 }
