@@ -7,6 +7,49 @@
     <title>Acustom Dashboard</title>
 </head>
 <app-navigation></app-navigation>
-<app-cards></app-cards>
+<body>
+<div class="container-left">
+    <mat-card class="mat-card task-list">
+        <mat-card-header class="card-header">
+            <mat-card-title>
+             Tasks:
+            </mat-card-title>
+            <mat-card-title-group>
+               <!--- <ul> 
+                    <li routerLinkActive="active" *ngFor="let taskListTab of taskListTabs" class="">
+                            <a class="" [routerLink]="[taskListTab.path]">
+                                <i class="material-icons">{{ taskListTab.icon }}</i>
+                                <p>{{ taskListTab.title }}</p>
+                            </a>    
+                    </li>
+                </ul>-->
+            </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>This is the inside of the card.</mat-card-content>
+    </mat-card>
+</div>
+<div class="container-right-top">
+   <!--- <mat-card class="mat-card order-count">
+        <mat-card-header class="card-header">
+            <mat-card-title>Orders </mat-card-title>
+            <mat-card-subtitle>Completed/Total</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>This is the inside of the card.</mat-card-content>
+    </mat-card> -->
+    
+</div>
+<!---
+<div class="container-right-bttm">
+    <mat-card class="mat-card client-order-list">
+        <mat-card-header class="card-header">
+            <mat-card-title>
+             Client and Order List
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>This is the inside of the card.</mat-card-content>
+    </mat-card>
+</div>
+<app-cards></app-cards>-->
+</body>
 <router-outlet></router-outlet>
 </html>

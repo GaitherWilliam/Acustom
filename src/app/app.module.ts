@@ -44,6 +44,8 @@ import { UploadDetailsComponent } from './upload-details/upload-details.componen
 import { CardsComponent } from './dashboard/cards/cards.component';
 import { PreProductionComponent } from './dashboard/cards/pre-production/pre-production.component';
 import { CustomerDashComponent } from './dashboard/customer-dash/customer-dash.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { MatProgressBarModule} from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -68,7 +70,8 @@ import { CustomerDashComponent } from './dashboard/customer-dash/customer-dash.c
     UploadDetailsComponent,
     CardsComponent,
     PreProductionComponent,
-    CustomerDashComponent
+    CustomerDashComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,
@@ -83,6 +86,7 @@ import { CustomerDashComponent } from './dashboard/customer-dash/customer-dash.c
     MatOptionModule,
     MatCardModule,
     NgxPaginationModule,
+    MatProgressBarModule,
     ToastrModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     provideFirebaseApp(() => initializeApp(environment.firebase)),

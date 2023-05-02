@@ -1,1 +1,44 @@
-<p>customer-dash works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<app-navigation></app-navigation>
+<body>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Progress on Order#:12345, Sports Keychain</mat-card-title>
+            <mat-card-subtitle>Designed by: Lovely Charm Designs</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <br>
+            <app-progress-bar></app-progress-bar>
+        </mat-card-content>
+    </mat-card>
+</body>
+</html>
+<style>
+    :root {
+    --bg-color:#769FB6;
+    --secondary-bg-color: #ffeddf;
+    --dark-blue: #003655;
+    --text-color:#769FB6;;
+    --light-blue: #95C0D8;
+    --border-radius: 4px;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+mat-card {
+    width: 500px;
+    height:auto;
+}
+mat-card-header {
+    background-color:var(--dark-blue);
+    color: var(--light-blue);
+}
+</style>
