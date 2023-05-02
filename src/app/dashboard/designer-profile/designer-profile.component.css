@@ -1,0 +1,18 @@
+:root {
+    --bg-color:#769FB6;
+    --secondary-bg-color: #ffeddf;
+    --dark-blue: #003655;
+    --text-color:#769FB6;;
+    --light-blue: #95C0D8;
+    --border-radius: 4px;
+}
+
+.profile-container {
+    background-color: var(--light-blue);
+    border:5px solid var(--dark-blue);
+    width: 800px;
+    height: 700px;
+    position:relative;
+    left: 1500px;
+    bottom: 1840px;
+}
