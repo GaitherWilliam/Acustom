@@ -1,0 +1,17 @@
+:root {
+    --bg-color:#769FB6;
+    --secondary-bg-color: #ffeddf;
+    --dark-blue: #003655;
+    --text-color:#769FB6;;
+    --light-blue: #95C0D8;
+    --border-radius: 4px;
+}
+.reactions-container {
+    width: 1400px;
+    height: 375px;
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+    position: relative;
+    left: 900px;
+    bottom: 1850px;
+}

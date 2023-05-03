@@ -6,10 +6,12 @@
     --light-blue: #95C0D8;
     --border-radius: 4px;
 }
-
 .profile-container {
-    background-color: var(--light-blue);
-    border:5px solid var(--dark-blue);
     width: 800px;
-    height: 700px;
+    height: 750px;
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+    position: relative;
+    left: 1500px;
+    bottom: 1890px;
 }

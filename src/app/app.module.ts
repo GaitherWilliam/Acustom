@@ -46,6 +46,8 @@ import { PreProductionComponent } from './dashboard/cards/pre-production/pre-pro
 import { CustomerDashComponent } from './dashboard/customer-dash/customer-dash.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { MatProgressBarModule} from '@angular/material/progress-bar';
+import { ProfileComponent } from './profile/profile.component';
+import { ProgressReactionsDisplayComponent } from './progress-reactions-display/progress-reactions-display.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +73,9 @@ import { MatProgressBarModule} from '@angular/material/progress-bar';
     CardsComponent,
     PreProductionComponent,
     CustomerDashComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    ProfileComponent,
+    ProgressReactionsDisplayComponent
   ],
   imports: [
     BrowserModule,
