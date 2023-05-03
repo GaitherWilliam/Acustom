@@ -15,3 +15,32 @@
     left: 1500px;
     bottom: 1890px;
 }
+.profile-background-container {
+    width: 800px;
+    height: 200px;
+    background-color: var(--dark-blue);
+}
+mat-card.bio-container {
+    width: 600px;
+    height: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: 120px;
+}
+.profile-picture {
+    background-color: var(--light-blue);
+    width: 200px;
+    height: 200px;
+    border-radius: 50% ;
+}
+.order-bttn {
+    background-color: var(--light-blue);
+    width: 100px;
+    height: 50px;
+    color: white;
+    border: none;
+    display: block;
+    float: right;
+    margin: 25px;
+}
