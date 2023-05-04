@@ -1,0 +1,78 @@
+:root {
+    --bg-color:#769FB6;
+    --secondary-bg-color: #ffeddf;
+    --dark-blue: #003655;
+    --text-color:#769FB6;;
+    --light-blue: #95C0D8;
+    --border-radius: 4px;
+}
+body {
+    background-color: #769FB6;
+    background-image: url("assets\resources\img\geometric_background.jpg");
+    background-size: cover;
+    height: 100%;
+    padding: 25px;
+    padding-left: 150px;
+}
+mat-card {
+    height: 100%;
+    background-color: var(--light-blue);
+}
+mat-card-header {
+    background-color: var(--dark-blue);
+    color: var(--light-blue);;
+}
+mat-card-subtitle {
+    color: var(--light-blue);
+}
+mat-card-content {
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+}
+.container-left {
+    width: 800px;
+    position:relative; 
+} 
+.container-right-top {
+    width: 500px;
+    height: 100%;
+    left: 900px;
+    bottom: 1240px;
+}
+mat-card mat-card.order-count {
+    height: 100%;
+}
+.container-right-bttm {
+    width: 800px;
+    height: 450px;
+    position: relative;
+    left: 900px;
+    bottom: 1150px;
+    
+}
+mat-card mat-card.client-order-list {
+    height: 100%;
+}
+
+ul.order-progress-tasks {
+    list-style: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+ul.order-progress-tasks li {
+    display: inline-block;
+    font-size: 10px;
+    padding: 7px;
+}
+ul.order-progress-nums li {
+    background-color: var(--light-blue);
+    border: 2px solid var(--dark-blue);
+    display: inline-block;
+    font-size: 10px;
+    padding: 20px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
