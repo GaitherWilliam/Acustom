@@ -34,7 +34,7 @@ mat-card.bio-container {
     height: 200px;
     border-radius: 50% ;
 }
-.order-bttn {
+a.order-bttn {
     background-color: var(--light-blue);
     width: 100px;
     height: 50px;
