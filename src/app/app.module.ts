@@ -52,6 +52,8 @@ import { MAT_CHECKBOX_DEFAULT_OPTIONS, MatCheckboxDefaultOptions, MatCheckboxMod
 import { MatTabsModule } from '@angular/material/tabs';
 import { PeriProductionComponent } from './dashboard/cards/peri-production/peri-production.component';
 import { PostProductionComponent } from './dashboard/cards/post-production/post-production.component';
+import { OrderCountComponent } from './dashboard/cards/order-count/order-count.component';
+import { ClientorderlistComponent } from './dashboard/cards/clientorderlist/clientorderlist.component';
 
 @NgModule({
   declarations: [
@@ -81,7 +83,9 @@ import { PostProductionComponent } from './dashboard/cards/post-production/post-
     ProfileComponent,
     ProgressReactionsDisplayComponent,
     PeriProductionComponent,
-    PostProductionComponent
+    PostProductionComponent,
+    OrderCountComponent,
+    ClientorderlistComponent
   ],
   imports: [
     BrowserModule,

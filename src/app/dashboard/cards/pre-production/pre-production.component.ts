@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
 
-export interface Task {
+declare interface Task {
   name: string;
   completed: boolean;
   color: ThemePalette;
@@ -21,8 +21,8 @@ export class PreProductionComponent {
     subtasks: [
       {name: 'Gloves', completed: false, color: 'primary'},
       {name: 'Gel Polish', completed: false, color: 'accent'},
-      {name: 'Nail Lamp', completed: false, color: 'warn'},
-    ],
+      {name: 'Nail Lamp', completed: false, color: 'warn'}
+    ]
   };
 
   allComplete: boolean = false;
