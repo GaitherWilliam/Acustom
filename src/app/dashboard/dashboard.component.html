@@ -9,23 +9,17 @@
 <app-navigation></app-navigation>
 <body>
 <div class="container-left">
-    <mat-card class="mat-card task-list">
-        <mat-card-header class="card-header">
-            <mat-card-title>
-             Tasks:
-            </mat-card-title>
-            <mat-card-title-group>
-               <!--- <ul> 
-                    <li routerLinkActive="active" *ngFor="let taskListTab of taskListTabs" class="">
-                            <a class="" [routerLink]="[taskListTab.path]">
-                                <i class="material-icons">{{ taskListTab.icon }}</i>
-                                <p>{{ taskListTab.title }}</p>
-                            </a>    
-                    </li>
-                </ul>-->
-            </mat-card-title-group>
+    <mat-card>
+        <mat-card-header>
+        <mat-card-title>Production Tasks:</mat-card-title>    
         </mat-card-header>
-        <mat-card-content>This is the inside of the card.</mat-card-content>
+            <mat-card-content>
+                <mat-tab-group>
+                    <mat-tab label="Pre-Production"><app-pre-production></app-pre-production></mat-tab>
+                    <mat-tab label="Peri-Production"><app-peri-production></app-peri-production></mat-tab>
+                    <mat-tab label="Post-Production"><app-post-production></app-post-production></mat-tab>
+                </mat-tab-group>
+            </mat-card-content>
     </mat-card>
 </div>
 <div class="container-right-top">

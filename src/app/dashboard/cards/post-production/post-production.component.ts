@@ -7,13 +7,12 @@ export interface Task {
   color: ThemePalette;
   subtasks?: Task[]; 
 }
-
 @Component({
-  selector: 'app-pre-production',
-  templateUrl: './pre-production.component.html',
-  styleUrls: ['./pre-production.component.css']
+  selector: 'app-post-production',
+  templateUrl: './post-production.component.html',
+  styleUrls: ['./post-production.component.css']
 })
-export class PreProductionComponent {
+export class PostProductionComponent {
   task: Task = {
     name: 'Inventory',
     completed: false,
@@ -45,5 +44,5 @@ export class PreProductionComponent {
     }
     this.task.subtasks.forEach(t => (t.completed = completed));
   }
-
+  
 }

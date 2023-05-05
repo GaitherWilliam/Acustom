@@ -64,3 +64,16 @@ mat-card mat-card.order-count {
 mat-card mat-card.client-order-list {
     height: 100%;
 }
+
+mat-card-title-group {
+    margin-left: 100px;
+}
+mat-card-title-group.task-list-tabs ul li.task-list-tab {
+    width: 25px;
+    height: 20px;
+    color:  var(--light-blue);
+    border: none;
+    display: block;
+    float: left;
+    margin: 25px;
+}

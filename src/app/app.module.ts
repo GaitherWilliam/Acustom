@@ -48,6 +48,10 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { MatProgressBarModule} from '@angular/material/progress-bar';
 import { ProfileComponent } from './profile/profile.component';
 import { ProgressReactionsDisplayComponent } from './progress-reactions-display/progress-reactions-display.component';
+import { MAT_CHECKBOX_DEFAULT_OPTIONS, MatCheckboxDefaultOptions, MatCheckboxModule} from '@angular/material/checkbox';
+import { MatTabsModule } from '@angular/material/tabs';
+import { PeriProductionComponent } from './dashboard/cards/peri-production/peri-production.component';
+import { PostProductionComponent } from './dashboard/cards/post-production/post-production.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +79,9 @@ import { ProgressReactionsDisplayComponent } from './progress-reactions-display/
     CustomerDashComponent,
     ProgressBarComponent,
     ProfileComponent,
-    ProgressReactionsDisplayComponent
+    ProgressReactionsDisplayComponent,
+    PeriProductionComponent,
+    PostProductionComponent
   ],
   imports: [
     BrowserModule,
@@ -89,6 +95,8 @@ import { ProgressReactionsDisplayComponent } from './progress-reactions-display/
     MatSelectModule,
     MatOptionModule,
     MatCardModule,
+    MatTabsModule,
+    MatCheckboxModule,
     NgxPaginationModule,
     MatProgressBarModule,
     ToastrModule.forRoot(),
@@ -106,7 +114,9 @@ import { ProgressReactionsDisplayComponent } from './progress-reactions-display/
     BrowserAnimationsModule
   ],
   providers: [
-    ScreenTrackingService, UserTrackingService
+    ScreenTrackingService, UserTrackingService,
+    {provide: MAT_CHECKBOX_DEFAULT_OPTIONS, useValue: { clickAction: 'check-indeterminate'} as 
+    MatCheckboxDefaultOptions}
   ],
   bootstrap: [ AppComponent, CalendarComponent ]
 })

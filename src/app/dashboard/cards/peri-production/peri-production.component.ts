@@ -9,11 +9,11 @@ export interface Task {
 }
 
 @Component({
-  selector: 'app-pre-production',
-  templateUrl: './pre-production.component.html',
-  styleUrls: ['./pre-production.component.css']
+  selector: 'app-peri-production',
+  templateUrl: './peri-production.component.html',
+  styleUrls: ['./peri-production.component.css']
 })
-export class PreProductionComponent {
+export class PeriProductionComponent {
   task: Task = {
     name: 'Inventory',
     completed: false,
@@ -45,5 +45,5 @@ export class PreProductionComponent {
     }
     this.task.subtasks.forEach(t => (t.completed = completed));
   }
-
+  
 }
