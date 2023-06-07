@@ -1,0 +1,37 @@
+<div class="container">
+  <h2>Add Task</h2>
+</div>
+<form
+  [formGroup]="addTaskForm"
+  (ngSubmit)="submitTaskData()"
+  novalidate
+  class="example-form"
+>
+  <label>Enter task information: </label>
+  <input
+    class="form-control"
+    matInput
+    placeholder="Enter task here"
+    type="text"
+    formControlName="text"
+    name="text"
+    ngModel
+    required
+  />
+  <div class="from-group- text-right">
+    <button
+      type="button"
+      class="btn btn-secondary gap-right"
+      (click)="resetForm()"
+    >
+      Reset
+    </button>
+    <button
+      type="submit"
+      class="btn btn-success"
+      [disabled]="!tasklistForm.valid"
+    >
+      Add Task
+    </button>
+  </div>
+</form>

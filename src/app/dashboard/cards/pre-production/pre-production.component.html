@@ -1,25 +1,13 @@
-<div class="pre-production-tasks">
-            <section class="pre-production-section">
-            <span class="pre-production-list-section">
-                      <mat-checkbox class="pre-production-tasks"
-                                    [checked]="allComplete"
-                                    [color]="task.color"
-                                    [indeterminate]="someComplete()"
-                                    (change)="setAll($event.checked)">
-                        {{task.name}}
-                      </mat-checkbox>
-                    </span>
-                    <span class="pre-production-subtask">
-                      <ul>
-                        <li *ngFor="let subtask of task.subtasks">
-                          <mat-checkbox [(ngModel)]="subtask.completed"
-                                        [color]="subtask.color"
-                                        (ngModelChange)="updateAllComplete()">
-                            {{subtask.name}}
-                          </mat-checkbox>
-                        </li>
-                      </ul>
-                    </span>
-                  </section>  
-    </div>
-   
+<div class="container">
+  <button class="button-link" routerLink="/add-task" routerLinkActive="active">
+    Add Task
+  </button>
+  <button
+    class="button-link"
+    routerLink="/view-tasklist"
+    routerLinkActive="active"
+  >
+    Task List
+  </button>
+  <router-outlet></router-outlet>
+</div>

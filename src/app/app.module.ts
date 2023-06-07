@@ -122,6 +122,6 @@ import { ClientorderlistComponent } from './dashboard/cards/clientorderlist/clie
     {provide: MAT_CHECKBOX_DEFAULT_OPTIONS, useValue: { clickAction: 'check-indeterminate'} as 
     MatCheckboxDefaultOptions}
   ],
-  bootstrap: [ AppComponent, CalendarComponent ]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
