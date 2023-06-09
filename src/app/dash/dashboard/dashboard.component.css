@@ -1,0 +1,16 @@
+:root {
+    --bg-color: #86615C;
+    --secondary-bg-color: #ffeddf;
+    --highlight-color: #769FB6;
+    --text-color: #360031;
+    --light-bg-color: #8D7471;
+    --dash-bg-color: #769FB6;
+    --dash-secondary-bg-color: #003655;
+    --dash-text-color: #95C0D8;
+}
+body {
+    background-color: var(--dash-bg-color);
+}
+p {
+    color: var(--dash-secondary-bg-color);
+}

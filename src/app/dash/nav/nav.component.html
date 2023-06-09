@@ -1,1 +1,45 @@
-<p>nav works!</p>
+<!--Acustom logo that links back to homepage-->
+<div class="Acustom_logo">
+  <a href=".\src\index.html"></a>
+</div>
+<!--Dashboard left side navigation-->
+<div class="nav_wrapper">
+  <ul class="nav">
+    <li
+      routerLinkActive="active"
+      *ngFor="let dashTab of dashTabs"
+      class="{{ dashTab.class }} nav-item"
+    >
+      <a class="nav-link" [routerLink]="[dashTab.path]">
+        <i class="material-icons">{{ dashTab.icon }}</i>
+        <p>{{ dashTab.title }}</p>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<style>
+  :root {
+    --bg-color: #86615c;
+    --secondary-bg-color: #ffeddf;
+    --highlight-color: #769fb6;
+    --text-color: #360031;
+    --light-bg-color: #8d7471;
+
+    --dash-bg-color: #769fb6;
+    --dash-secondary-bg-color: #003655;
+    --dash-text-color: #95c0d8;
+  }
+  .nav_wrapper {
+    background-color: var(--dash-secondary-bg-color);
+    color: var(--dash-text-color);
+    width: 120px;
+    height: 100%;
+    float: left;
+  }
+  .nav {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
