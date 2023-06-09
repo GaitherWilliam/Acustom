@@ -32,6 +32,7 @@ import { OrderListComponent } from './order-list/order-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { TodolistComponent } from './dash/todolist/todolist.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     RegistrationFormComponent,
     CustomerFormComponent,
     EditOrderComponent,
-    OrderListComponent
+    OrderListComponent,
+    TodolistComponent
   ],
   imports: [
     BrowserModule,
