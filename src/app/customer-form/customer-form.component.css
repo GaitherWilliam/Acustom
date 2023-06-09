@@ -12,6 +12,24 @@
     text-align: center;
 }
 
+.form-container{
+    height: 100%;
+    font-family: Quicksand;
+    background-color: #ffeddf;
+    opacity: 0.8;
+    background-image: radial-gradient(circle, #ffeddf, #dadbc5, #afcbb9, #88b7b8, #769fb6);
+}
+
+.close-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+h2{
+    color: var(--dark-blue);
+}
+
 form {
     display: inline-block;
 }

@@ -8,7 +8,13 @@
 </head>
 <app-navigation></app-navigation>
 <body>
+<<<<<<< HEAD
 <div class="container-left">
+=======
+    <div class="row" *ngIf="authService.userData as user">
+        <h1>Hello: <strong>{{(user.email) ? user.email : 'User'}}</strong></h1>
+    </div>
+>>>>>>> develop
     <mat-card>
         <mat-card-header>
         <mat-card-title>Production Tasks:</mat-card-title>    

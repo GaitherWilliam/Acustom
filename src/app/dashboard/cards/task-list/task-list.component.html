@@ -1,1 +1,49 @@
-<p>task-list works!</p>
+<div
+  class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+>
+  <h2>Task List</h2>
+  <a routerLink="/add-task" class="btn btn-success" *ngIf="hideWhenNoTasks">
+    Add Task
+  </a>
+  <p>No tasks added yet!</p>
+  <a routerLink="/add-task" class="btn btn-success" *ngIf="hideWhenNoTasks">
+    Add Task
+  </a>
+  <div class="table-responsive" *ngIf="hideWhenNoTasks">
+    <table
+      class="table table-bordered table-responsive-sm table-responsive-md table-responsive-lg"
+    >
+      <thead>
+        <tr>
+          <th scope="col">Task</th>
+          <th class="text-center" scope="col">Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="
+            let task of Task | paginate : { itemsPerPage: 10, currentPage: p };
+            let i = index
+          "
+        >
+          <th scope="row">{{ task.$key }}</th>
+          <td>{{ task.text }}</td>
+          <td class="text-center action-block">
+            <span
+              class="mr-2 btn btn-outline-primary btn-sm"
+              routerLink="/edit-task/{{ task.$key }}"
+              >Edit</span
+            >
+            >
+            <span
+              class="btn btn-outline-danger btn-sm"
+              (click)="deleteTask(task)"
+              >Delete</span
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

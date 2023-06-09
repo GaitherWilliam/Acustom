@@ -1,0 +1,16 @@
+.designer-page{
+    height: fit-content;
+    background-image: linear-gradient(to left bottom, #95c0d8, #8fbad1, #89b3cb, #84adc4, #7ea7be, #729bb3, #668fa8, #5a839d, #466f8a, #315b78, #1c4866, #003655);
+}
+
+.designer-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-family: 'Quicksand';
+}
+
+h1{
+    font-family: 'Quicksand';
+    text-align: center;
+}

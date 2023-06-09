@@ -1,15 +1,18 @@
-<div>
+<div class="form-container">
+    <svg mat-dialog-close xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-square-fill" viewBox="0 0 16 16">
+        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
+      </svg>
     <h2>Order Form</h2>
     <div class="customer-form">
-        <form [formGroup]="customerOrderForm" (ngSubmit)="submitOrderData()" novalidate class="example-form">
+        <form mat-dialog-content [formGroup]="customerOrderForm" (ngSubmit)="submitOrderData()" novalidate class="example-form">
             <mat-form-field class="example-full-width">
-                <input class="form-control" matInput placeholder="Name" type="text" formControlName="name" name="name"
-                    ngModel required>
+                <input matInput placeholder="Name" type="text" formControlName="name" name="name"
+                     required>
             </mat-form-field>
 
             <mat-form-field class="example-full-width">
-                <input class="form-control" type="number" matInput placeholder="Quantity" formControlName="quantity"
-                    value="0" ngModel name="quantity">
+                <input type="number" matInput placeholder="Quantity" formControlName="quantity"
+                    value="0" name="quantity">
             </mat-form-field>
 
             <mat-form-field class="example-full-width">
@@ -20,20 +23,25 @@
                     <mat-option value="Black and Gold">Black And Gold</mat-option>
                     <mat-option value="Yellow and Pink">Yellow and Pink</mat-option>
                 </mat-select>
-                <!-- <mat-option *ngFor="let product of products" formControlName="product" [value]="product.viewValue">
-                {{product.viewValue}}
-            </mat-option> -->
             </mat-form-field>
-
+            <div class="container" style="width:450px">
+                <div class="my-3">
+                  <app-upload-form></app-upload-form>
+                </div>
+              
+                <div class="my-2">
+                  <app-upload-list></app-upload-list>
+                </div>
+              </div>
+              <br>
             <mat-form-field class="example-full-width">
-                <textarea matInput placeholder="Leave a comment" formControlName="comment" value="some comments" ngModel
+                <textarea matInput placeholder="Leave a comment" formControlName="comment" value="some comments"
                     name="comments"></textarea>
             </mat-form-field>
-
-            <button type="button" class="btn btn-secondary gap-right" (click)="ResetForm()">
+            <button type="button" class="btn btn-danger gap-right" (click)="ResetForm()">
                 Reset
             </button>
-            <button type="submit" class="btn btn-success" [disabled]="!customerOrderForm.valid">
+            <button mat-dialog-close type="submit" class="btn btn-primary" [disabled]="!customerOrderForm.valid">
                 Add Order
             </button>
         </form>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TasklistService} from 'app/shared/tasklist.service';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 
 interface Task {
@@ -12,19 +12,18 @@ interface Task {
   templateUrl: './add-task.component.html',
   styleUrls: ['./add-task.component.css']
 })
-
 export class AddTaskComponent implements OnInit {
   public addTaskForm: FormGroup;
   constructor(
     public taskApi: TasklistService,
     public fb: FormBuilder,
     public toastr: ToastrService
-  ){}
+  ){ }
   ngOnInit() {
     this.taskApi.GetTaskList();
-    this._tasklistForm();
+    this.tasklistForm();
   }
-  _tasklistForm() {
+  tasklistForm() {
     this.addTaskForm = this.fb.group({
       text: ['', [Validators.required, Validators.minLength(2)]],
     })

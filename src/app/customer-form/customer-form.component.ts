@@ -18,7 +18,7 @@ export class CustomerFormComponent implements OnInit {
   constructor(
     public crudAPI: CrudService,
     public fb: FormBuilder,
-    public toastr: ToastrService
+    public toastr: ToastrService,
   ) { }
   ngOnInit() {
     this.crudAPI.GetOrdersList();

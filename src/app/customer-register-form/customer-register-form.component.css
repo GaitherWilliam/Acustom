@@ -1,21 +1,3 @@
-:root {
-    --bg-color:#769FB6;
-    --secondary-bg-color: #ffeddf;
-    --dark-blue: #003655;
-    --text-color:#769FB6;;
-    --light-blue: #95C0D8;
-    --border-radius: 4px;
-  }
-    body {
-    margin: 0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      background-color: var(--dark-blue);
-    }
-    
     .container, .container-customer, .container-business {
       width: 400px;
       height: relative;
@@ -32,7 +14,6 @@
       font-family: 'Quicksand', sans-serif;
       color: var(--bg-color);
     }
-  
   
     .form--hidden {
       display: none;
@@ -51,24 +32,11 @@
       text-align: center;
     }
     
-    .form__message {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    
-    .form__message--success {
-      color: var(--color-success);
-    }
-    
-    .form__message--error {
-      color: var(--color-error);
-    }
-    
     .form__input-group {
       margin-bottom: 1rem;
     }
     
-    .form__input {
+    .formControl {
       display: block;
       width: 100%;
       padding: 0.75rem;
@@ -80,7 +48,7 @@
       transition: background 0.2s, border-color 0.2s;
     }
     
-    .form__input:focus {
+    .formControl:focus {
       border-color: var(--dark-blue);
       background-color: var(--bg-color);
       color: white;
@@ -137,4 +105,12 @@
     p {
         font-family: 'Quicksand';
     }
-    
+
+    .google-container{
+      display: flex;
+      align-items: center;
+    }
+
+    h2{
+      text-align: center;
+    }

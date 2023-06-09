@@ -1,0 +1,12 @@
+.list-container{
+        height: 100%;
+        font-family: Quicksand;
+        background-color: var(--secondary-bg-color);
+        color: var(--dark-blue);
+}
+
+.table{
+    color: var(--dark-blue);
+    border-color:var(--dark-blue);
+    background-color: var(--light-blue);
+}

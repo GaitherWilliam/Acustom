@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import {ThemePalette} from '@angular/material/core';
+=======
+import { AuthService } from 'app/services/auth.service';
+>>>>>>> develop
 
 @Component({
   selector: 'app-dashboard',
@@ -7,6 +11,7 @@ import {ThemePalette} from '@angular/material/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+<<<<<<< HEAD
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
@@ -24,5 +29,9 @@ export class DashboardComponent implements OnInit {
   }
   
   constructor() {}
+=======
+  constructor(public authService: AuthService) {}
+  ngOnInit(): void {}
+>>>>>>> develop
 }
 

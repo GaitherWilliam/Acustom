@@ -1,0 +1,26 @@
+<div class="container-customer">
+  <h2>Register</h2>
+  <div class="formGroup">
+    <input type="email" class="formControl" placeholder="Email Address" #userEmail required />
+  </div>
+  <div class="formGroup">
+    <input type="password" class="formControl" placeholder="Password" #userPwd required />
+  </div>
+  <div class="formGroup">
+    <input type="password" class="formControl" placeholder="Verify Password" #userPwd required />
+  </div>
+  <div class="formGroup">
+    <input type="button" class="form__button" value="Sign Up"
+      (click)="authService.SignUp(userEmail.value, userPwd.value)" />
+  </div>
+  <div class="google-container">
+    <div class="formGroup">
+      <span class="or"><span>Or sign up with -></span></span>
+    </div>
+    <div class="formGroup">
+      <button type="button" class="btn" (click)="authService.GoogleAuth()">
+        <img src="assets\resources\img\google-icon.png">
+      </button>
+    </div>
+  </div>
+</div>

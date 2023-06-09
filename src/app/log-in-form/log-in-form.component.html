@@ -11,22 +11,31 @@
 <body>
     <div class="container">
         <h1 class="form__title">Login</h1>
-        <div class="form__input-group">
-            <input type="email" class="form__input" autofocus placeholder="Email address">
-        </div> <!--end of email address field-->
-        <div class="form__input-group">
-            <input type="password" class="form__input" autofocus placeholder="Password">
-        </div> <!--end of password field-->
-        <div class="buttons">
-            <button class="form__button">Continue</button>
-            <br><br>
-            <p>or sign in using</p>
-            <a href="#"><img src="assets\resources\img\google-icon.png"></a>
-            <a href="#"><img src="assets\resources\img\facebook-icon.png"></a>
-            <a href="#"><img src="assets\resources\img\linkedin-icon.png"></a>
-            <p>Don't have an account.</p>
+        <div class="formGroup form__input">
+            <input type="email" class="formControl" autofocus placeholder="Email address" #userEmail required>
+        </div> 
+        <div class="formGroup">
+            <input type="password" class="formControl" placeholder="Password" #userPassword required>
+        </div> 
+        <div class="formGroup">
+            <input type="button" class="btn-log-in" value="Log in"
+                (click)="authService.SignIn(userEmail.value, userPassword.value)">
+        </div>
+        <div class="google-container">
+            <div class="formGroup">
+                <span class="or"><span>Or sign up with -></span></span>
+            </div>
+            <div class="formGroup">
+                <button type="button" class="btn" (click)="authService.GoogleAuth()">
+                    <img src="assets\resources\img\google-icon.png">
+                </button>
+            </div>
+        </div>
+        <br>
+        <div class="footer">
+            <p>Don't have an account -></p>
             <a routerLink="/registration-form-component" routerLinkActive="active" ariaCurrentWhenActive="page">
-                Register</a>
+                Register Here</a>
         </div> <!--end of buttons class-->
     </div> <!-- end of container class -->
     <router-outlet></router-outlet>

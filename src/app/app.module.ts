@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AngularFireModule } from '@angular/fire/compat'
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from './environments/environment';
@@ -27,12 +29,19 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
+<<<<<<< HEAD
 import { MatCardModule } from '@angular/material/card';
+=======
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatCardModule} from '@angular/material/card';
+import {MatExpansionModule} from '@angular/material/expansion';
+>>>>>>> develop
 import { EditOrderComponent } from './edit-order/edit-order.component';
 import { OrderListComponent } from './order-list/order-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxPaginationModule } from 'ngx-pagination';
+<<<<<<< HEAD
 import { CustomerLoginFormComponent } from './customer-login-form/customer-login-form.component';
 import { BusinessLoginFormComponent } from './business-login-form/business-login-form.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -54,6 +63,22 @@ import { PeriProductionComponent } from './dashboard/cards/peri-production/peri-
 import { PostProductionComponent } from './dashboard/cards/post-production/post-production.component';
 import { OrderCountComponent } from './dashboard/cards/order-count/order-count.component';
 import { ClientorderlistComponent } from './dashboard/cards/clientorderlist/clientorderlist.component';
+=======
+import { CustomerRegisterFormComponent } from './customer-register-form/customer-register-form.component';
+import { BusinessRegisterFormComponent } from './business-register-form/business-register-form.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { DesignerListComponent } from './designer-list/designer-list.component';
+import { DesignerCardComponent } from './designer-card/designer-card.component';
+import { DesignerDashboardComponent } from './designer-dashboard/designer-dashboard.component';
+import { UploadFormComponent } from './upload-form/upload-form.component';
+import { UploadListComponent } from './upload-list/upload-list.component';
+import { UploadDetailsComponent } from './upload-details/upload-details.component';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AuthService } from './services/auth.service'
+import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';;
+>>>>>>> develop
 
 @NgModule({
   declarations: [
@@ -65,8 +90,13 @@ import { ClientorderlistComponent } from './dashboard/cards/clientorderlist/clie
     CustomerFormComponent,
     EditOrderComponent,
     OrderListComponent,
+<<<<<<< HEAD
     CustomerLoginFormComponent,
     BusinessLoginFormComponent,
+=======
+    CustomerRegisterFormComponent,
+    BusinessRegisterFormComponent,
+>>>>>>> develop
     DashboardComponent,
     CustomerFormComponent,
     RegistrationFormComponent,
@@ -76,6 +106,7 @@ import { ClientorderlistComponent } from './dashboard/cards/clientorderlist/clie
     UploadFormComponent,
     UploadListComponent,
     UploadDetailsComponent,
+<<<<<<< HEAD
     CardsComponent,
     PreProductionComponent,
     CustomerDashComponent,
@@ -86,11 +117,17 @@ import { ClientorderlistComponent } from './dashboard/cards/clientorderlist/clie
     PostProductionComponent,
     OrderCountComponent,
     ClientorderlistComponent
+=======
+    DesignerListComponent,
+    DesignerCardComponent,
+    DesignerDashboardComponent,
+>>>>>>> develop
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFirestoreModule,
+    AngularFireAuthModule,
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
@@ -98,11 +135,21 @@ import { ClientorderlistComponent } from './dashboard/cards/clientorderlist/clie
     MatInputModule,
     MatSelectModule,
     MatOptionModule,
+<<<<<<< HEAD
     MatCardModule,
     MatTabsModule,
     MatCheckboxModule,
     NgxPaginationModule,
     MatProgressBarModule,
+=======
+    MatDialogModule,
+    MatCardModule,
+    MatExpansionModule,
+    NgxPaginationModule,
+    AngularFireDatabaseModule,
+    AngularFireStorageModule,
+    MdbCarouselModule,
+>>>>>>> develop
     ToastrModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
@@ -118,10 +165,17 @@ import { ClientorderlistComponent } from './dashboard/cards/clientorderlist/clie
     BrowserAnimationsModule
   ],
   providers: [
+<<<<<<< HEAD
     ScreenTrackingService, UserTrackingService,
     {provide: MAT_CHECKBOX_DEFAULT_OPTIONS, useValue: { clickAction: 'check-indeterminate'} as 
     MatCheckboxDefaultOptions}
   ],
   bootstrap: [AppComponent]
+=======
+    ScreenTrackingService, UserTrackingService, AuthService
+  ],
+  bootstrap: [AppComponent,CalendarComponent],
+  entryComponents: [CustomerFormComponent]
+>>>>>>> develop
 })
 export class AppModule { }
