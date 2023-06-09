@@ -33,6 +33,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { TodolistComponent } from './dash/todolist/todolist.component';
+import { DashboardComponent } from './dash/dashboard/dashboard.component';
+import { NavComponent } from './dash/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { TodolistComponent } from './dash/todolist/todolist.component';
     CustomerFormComponent,
     EditOrderComponent,
     OrderListComponent,
-    TodolistComponent
+    TodolistComponent,
+    DashboardComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
