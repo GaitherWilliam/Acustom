@@ -8,7 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { LogInFormComponent } from './log-in-form/log-in-form.component';
 import { SplashMainComponent } from './splash-main/splash-main.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
-import { environment } from '../environments/environment';
+import { environment } from './environments/environment';
 import { provideAnalytics, getAnalytics, ScreenTrackingService, UserTrackingService } from '@angular/fire/analytics';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideDatabase, getDatabase } from '@angular/fire/database';
