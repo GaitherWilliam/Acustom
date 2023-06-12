@@ -27,14 +27,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
+import { MatCardModule } from '@angular/material/card'; 
 import { EditOrderComponent } from './edit-order/edit-order.component';
 import { OrderListComponent } from './order-list/order-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { TodolistComponent } from './dash/todolist/todolist.component';
 import { DashboardComponent } from './dash/dashboard/dashboard.component';
 import { NavComponent } from './dash/nav/nav.component';
+import { TodolistComponent } from './dash/todolist/todolist.component';
 
 @NgModule({
   declarations: [
@@ -46,9 +47,9 @@ import { NavComponent } from './dash/nav/nav.component';
     CustomerFormComponent,
     EditOrderComponent,
     OrderListComponent,
-    TodolistComponent,
     DashboardComponent,
-    NavComponent
+    NavComponent,
+    TodolistComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,6 +62,7 @@ import { NavComponent } from './dash/nav/nav.component';
     MatInputModule,
     MatSelectModule,
     MatOptionModule,
+    MatCardModule,
     NgxPaginationModule,
     ToastrModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
