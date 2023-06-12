@@ -30,6 +30,12 @@
         "source": "**",
         "destination": "/index.html"
       }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "task_message": "Add a new task"
+      }
     ]
   }
 }
