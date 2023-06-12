@@ -36,6 +36,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { DashboardComponent } from './dash/dashboard/dashboard.component';
 import { NavComponent } from './dash/nav/nav.component';
 import { TodolistComponent } from './dash/todolist/todolist.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { TodolistComponent } from './dash/todolist/todolist.component';
     AppRoutingModule,
     AngularFirestoreModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatButtonModule,
