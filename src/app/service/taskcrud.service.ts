@@ -24,7 +24,6 @@ export class TaskcrudService {
     return this.http.delete<Task>(this.serviceUrl+'/'+task.id);
    }
 
-
    editTask(task: Task) : Observable<Task> {
     return this.http.put<Task>(this.serviceUrl+'/'+task.id,task);
    }
