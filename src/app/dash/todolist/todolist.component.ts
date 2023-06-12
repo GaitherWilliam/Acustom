@@ -29,9 +29,11 @@ export class TodolistComponent implements OnInit {
     });
   }
 
-  addTask(etask : Task) {
-    this.crudService.addTask(etask).subscribe(res => {
+  addTask() {
+    this.taskObj.task_message = this.addTaskValue
+    this.crudService.addTask(this.taskObj).subscribe(res => {
       this.ngOnInit();
+      this.addTaskValue = '';
     }, err => {
       alert(err);
     })
