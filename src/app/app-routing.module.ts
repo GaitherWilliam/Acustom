@@ -8,6 +8,7 @@ import { OrderListComponent } from './order-list/order-list.component';
 import { EditOrderComponent } from './edit-order/edit-order.component';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dash/dashboard/dashboard.component';
+import { CustomerDashboardComponent } from './dash/customer-dashboard/customer-dashboard.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'view-orders', component: OrderListComponent },
   { path: 'edit-order/:id', component: EditOrderComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'customer-dashboard', component: CustomerDashboardComponent },
   { path: 'splash-main-component', component: SplashMainComponent },
   { path: '', redirectTo: '/splash-main-component', pathMatch: 'full' },
 ]
