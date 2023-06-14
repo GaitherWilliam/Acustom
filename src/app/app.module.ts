@@ -37,6 +37,8 @@ import { DashboardComponent } from './dash/dashboard/dashboard.component';
 import { NavComponent } from './dash/nav/nav.component';
 import { TodolistComponent } from './dash/todolist/todolist.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CustomerDashboardComponent } from './dash/customer-dashboard/customer-dashboard.component';
+import { ProgressbarComponent } from './dash/customer-dashboard/progressbar/progressbar.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { HttpClientModule } from '@angular/common/http';
     DashboardComponent,
     NavComponent,
     TodolistComponent,
+    CustomerDashboardComponent,
+    ProgressbarComponent,
   ],
   imports: [
     BrowserModule,
