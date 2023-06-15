@@ -1,5 +1,4 @@
 export class Task {
-    id: number;
-    name: string;
+    $key: number;
     input: string;
 }

@@ -2,16 +2,16 @@
     <div class="card-body" style="width: 500px;">
         <h4>To Do List</h4>
 
-        <div class="" todolist-container>
-            List body
+        <div class="todolist-container" *ngFor="let task of tasks">
+            {{ task.task }}
         </div>
         <div class="input-containter">
             <div class="card" style="padding: 5px">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Enter new task item"
+                    <input type="text" class="form-control" placeholder="Enter new task item" #taskInput
                         aria-label="task-item-input-area" aria-describedby="button-addon2">
                     <button class="btn btn-outline-secondary" type="button" id="button-add"
-                        (click)="onClick()">+</button>
+                        (click)="onClick(taskInput)">+</button>
                 </div>
             </div>
         </div>
