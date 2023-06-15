@@ -11,6 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 export class OrderListComponent implements OnInit {
   p: number = 1;
   Order: Order[];
+  numOfOrders: number = 0;
   hideWhenNoOrder: boolean = false;
   noData: boolean = false;
   preLoader: boolean = false;
@@ -50,5 +51,9 @@ export class OrderListComponent implements OnInit {
       this.crudApi.DeleteOrder(order.$key)
       this.toastr.success(order.name + "'s order was successfully deleted")
     }
+  }
+
+  orderCount() {
+   return this.numOfOrders = this.crudApi.GetOrdersList().valueChanges.length;
   }
 }

@@ -50,7 +50,11 @@ import { UploadListComponent } from './upload-list/upload-list.component';
 import { UploadDetailsComponent } from './upload-details/upload-details.component';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AuthService } from './services/auth.service'
-import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';;
+import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
+import { CustomerDashboardComponent } from './customer-dashboard/customer-dashboard.component';
+import { ProgressbarComponent } from './progressbar/progressbar.component';
+import { TodolistComponent } from './todolist/todolist.component';
+import { OrdercountComponent } from './order-list/ordercount/ordercount.component';;
 
 @NgModule({
   declarations: [
@@ -76,6 +80,10 @@ import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';;
     DesignerListComponent,
     DesignerCardComponent,
     DesignerDashboardComponent,
+    CustomerDashboardComponent,
+    ProgressbarComponent,
+    TodolistComponent,
+    OrdercountComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,23 +8,48 @@
     <title>Acustom Dashboard</title>
 </head>
 <app-navigation></app-navigation>
+
 <body>
-    <div class="row" *ngIf="authService.userData as user">
-        <h1>Hello: <strong>{{(user.email) ? user.email : 'User'}}</strong></h1>
-    </div>
-    <mat-card>
-        <div class="to-do-list-card">
-            <div class="to-do-list-card-header">
-                <span class="to-do-list-title">To-Do List: </span>
-                <ul class="to-do-list-tabs">
-                    <li class="tab">Order Prep</li>
-                    <li class="tab">Production Tasks</li>
-                    <li class="tab">Packing and Shipping</li>
-                    <li class="tab">Post Shipping</li>
-                </ul>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="row" *ngIf="authService.userData as user">
+                    <h1>Hello: <strong>{{(user.email) ? user.email : 'User'}}</strong></h1>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <app-ordercount></app-ordercount>
+                    </div>
+                </div>
             </div>
         </div>
-    </mat-card>
+        <div class="row">
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body">
+                        <app-order-list></app-order-list>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body">
+                        To Do List
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body">
+                        Reactions
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <router-outlet></router-outlet>
+
 </html>

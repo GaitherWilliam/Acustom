@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 import { DesignerListComponent } from './designer-list/designer-list.component';
 import { DesignerDashboardComponent } from './designer-dashboard/designer-dashboard.component';
 import { AuthGuard } from './shared/guard/auth.guard';
+import { CustomerDashboardComponent } from './customer-dashboard/customer-dashboard.component';
 
 const routes: Routes = [
   { path: 'dashboard-component', component: DashboardComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'edit-order/:id', component: EditOrderComponent },
   { path: 'designer-list', component: DesignerListComponent },
   { path: 'designer-dashboard', component: DesignerDashboardComponent },
+  { path: 'customer-dashboard', component: CustomerDashboardComponent },
   { path: 'splash-main-component', component: SplashMainComponent },
   { path: '', redirectTo: '/splash-main-component', pathMatch: 'full' },
 ]
