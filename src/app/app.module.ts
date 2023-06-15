@@ -83,7 +83,7 @@ import { OrdercountComponent } from './order-list/ordercount/ordercount.componen
     CustomerDashboardComponent,
     ProgressbarComponent,
     TodolistComponent,
-    OrdercountComponent,
+    OrdercountComponent
   ],
   imports: [
     BrowserModule,
