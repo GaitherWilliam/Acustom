@@ -14,9 +14,13 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.bi-x-square-fill{
+.bi-x-square-fill {
     position: absolute;
     top: 0;
     right: 0;
     color: #C35354;
+}
+
+.list-group-item span {
+    cursor: pointer;
 }
