@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Task } from 'app/models/task';
 import { TaskcrudService } from 'app/services/taskcrud.service';
 
 @Component({
@@ -14,8 +13,10 @@ export class TodolistComponent implements OnInit {
   tasks: any[] = [];
 
  ngOnInit(): void {
-  this.taskCrud.firestoreCollection.valueChanges().subscribe(item =>{
-    this.tasks = item;
+  this.taskCrud.firestoreCollection.valueChanges({idField: 'id'})
+  .subscribe(item =>{
+    this.tasks = item.sort((a:any,b:any) => 
+    {return a.isDone -b.isDone } ) //comparison method
   })
  }
 
@@ -25,6 +26,14 @@ export class TodolistComponent implements OnInit {
     taskInput.value = '';
   }
   this.ngOnInit();
+ }
+
+ onStatusChange(id: string, newStatus: boolean) {
+  this.taskCrud.updateTaskStatus(id, newStatus);
+ }
+
+ onDelete(id: string) {
+  this.taskCrud.deleteTask(id);
  }
 
 }//end of Todolist Service component 

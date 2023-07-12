@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AngularFireModule } from '@angular/fire/compat'
+import { AngularFireModule } from '@angular/fire/compat'; 
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
@@ -49,12 +49,12 @@ import { UploadFormComponent } from './upload-form/upload-form.component';
 import { UploadListComponent } from './upload-list/upload-list.component';
 import { UploadDetailsComponent } from './upload-details/upload-details.component';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { AuthService } from './services/auth.service'
+import { AuthService } from './services/auth.service';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 import { CustomerDashboardComponent } from './customer-dashboard/customer-dashboard.component';
 import { ProgressbarComponent } from './progressbar/progressbar.component';
 import { TodolistComponent } from './todolist/todolist.component';
-import { OrdercountComponent } from './order-list/ordercount/ordercount.component';;
+import { OrdercountComponent } from './order-list/ordercount/ordercount.component';
 
 @NgModule({
   declarations: [
@@ -83,7 +83,7 @@ import { OrdercountComponent } from './order-list/ordercount/ordercount.componen
     CustomerDashboardComponent,
     ProgressbarComponent,
     TodolistComponent,
-    OrdercountComponent
+    OrdercountComponent,
   ],
   imports: [
     BrowserModule,

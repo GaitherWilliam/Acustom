@@ -14,10 +14,22 @@ export class TaskcrudService {
     this.firestoreCollection = firestore.collection('tasks');
   }
 
+  getAllTasks() {
+    return this.firestoreCollection.get.length; 
+  }
+
   addTask(task: string){
     this.firestoreCollection.add({
-      task,
+      task: task,
       isDone: false
     })
+  }
+
+  updateTaskStatus(id:string, newStatus:boolean) {
+    this.firestoreCollection.doc(id).update({isDone:newStatus})
+  }
+
+  deleteTask(id:string) {
+    this.firestoreCollection.doc(id).delete(); 
   }
 }
