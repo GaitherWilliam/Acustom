@@ -45,3 +45,10 @@ Thumbs.db
 .firebase
 *-debug.log
 .runtimeconfig.json
+
+#package/package-lock
+/package-lock.json
+/package.json
+
+#environment file
+/environments/environment
